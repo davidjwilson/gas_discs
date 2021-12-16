@@ -1,0 +1,23 @@
+# GJ1214
+# Mega-MUSCLES HET Observations
+#
+TRACK
+  PROGRAM       UT19-2-003
+  OBJECT        GJ1214
+  INSTRUMENT    LRS2-B
+  RA		17:15:18.94
+  DEC		04:57:49.7
+  PMRA		580.44
+  PMDEC		-749.59
+  PMEPOCH       2000.0
+  EQUINOX       2000.0
+  MAG		14.7
+  PRI		4
+  SEEING        2.0
+  SKYBRIGHT     18.0
+  SKYTRANS      S
+  EXP		1500.0
+  NUMEXP        2              
+  VISITS        2
+
+ 

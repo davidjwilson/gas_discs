@@ -1,0 +1,329 @@
+%
+%                         HOBBY-EBERLY TELESCOPE
+%                      OBSERVING PROPOSAL TEMPLATE
+%                      McDonald Observatory Version
+%
+%          Version 7.1  (July 2020) Modified by A. Cochran - remove setup tables
+%          Version 7.0  (May 2017) Modified by A. Cochran for new instruments
+%          Version 6.0  (Jan 2007) modified by A. Cochran for web submission
+%          Version 5.1  (Jan 2005) modified by A. Cochran for long-term
+%          Version 5.0  (September 2004) modified by A. Cochran
+%          Version 4.0 (July 2001) modified by E. Barker
+%          Version 3.0  (March 2001)  modified by E. Barker
+%          Version 2.0  (July 1999)  modified by N. Gaffney
+%          Version 1.0  (September 1996)  written by E. Robinson
+%
+%  NOTE: Proposals may be printed in black & white so do NOT assume that 
+%  reviewers will see color versions of your figures.  Figures should be 
+%  clear without color.
+%
+%     Proposals can be submitted ONLY in  pdf format.  Do NOT use
+%     A4 paper when producing these files as that option will cause
+%     the loss of several lines of text on each page.
+%
+%     Experienced LaTeX users will be tempted to modify the macro
+%     definitions in the style file to change margins, font styles and
+%     sizes, and so on.  Resist this temptation.  The TAC will respond
+%     poorly to proposals that do not fit the standard style.
+%
+%
+\documentclass[11pt]{article}
+\usepackage{epsfig,HETprop70}
+\begin{document}
+
+%
+%  Enter your scientific justification below.  Note:  The text portion 
+%  of the justification must fit on one page.  A second page can be added 
+%  for references, figures, and tables.
+%  All pages related to the science justification must conform to the 
+%  standard 11pt font size and 1 inch margins on all sides.
+%
+\BeginSciJustification
+
+
+Enter your scientific justification below.  
+
+Note:  The text portion of the justification must fit on one page.  
+
+A second page can be added for references, figures, and tables.
+
+To add a page for references/figures/tables, uncomment the newpage command.
+
+All pages related to the science justification must conform to the 
+standard 11pt font size and 1 inch margins (all sides).
+
+\EndSciJustification
+
+%  To add a page for references, figures, and tables, uncomment the following
+%  command
+%
+%  \newpage
+
+
+
+%
+%   Describe the observations and justify the exposure times here.  
+%   Also fill out the two tables:  The "Object Table" and the 
+%   "Exposure Table". 
+%
+\BeginDescribeObservations
+
+This is the description of the observations.
+
+Also fill out the three tables:  The "Object Table" and the  "Exposure Table".
+For LRS2, HPF and VIRUS, there are no user-selectable setup options so do
+not include a setup table.
+However, for LRS2, do indicate in the text and with a note in the exposure
+table whether an observation is LRS2-B or LRS2-R (blue or red). 
+For and HRS, a setup table is needed.
+
+For the most up todate Throughput and Calibration Information, PLEASE
+CHECK the HET web pages.
+
+Please use the acceptable instrument setups in the Setup Table, as they
+will also be used by you in providing your Phase II documentation. 
+
+%
+%   Fill out the Object Table.  For large surveys, only enter enough objects to
+%   show the range of observation parameters.
+%   The "Acquisition ID Method" should be a short phrase such as:
+%      Finder Chart
+%      Accurate Coordinates
+%      Distinctive Object
+%      Blind Offset from bright star
+%   Replace the sample entries with your own.  Add lines to the table as needed.
+% 
+\BeginObjectTable
+                & \# of &    RA   &     Dec    &      & Filter or  & Acquisition Indentification \\
+Object Name     & Objs. & (hh:mm) &($\pm$dd:mm)& Mag. & Wavelength & Method \\ \hline
+
+Cyg X-1         &   1   &  21:44  & $+$38:18   & 15.5 &      V     & Accurate Coordinates \\
+Cyg X-1a        &   1   &  21:44  & $+$38:18   & 15.5 &      V     & Blind Offset from bright star \\
+DB WDwarfs &  94   &  00:00  &    00:00   & 16.0 &  5500\AA  & Finder Charts\\ \hline
+\EndObjectTable
+
+%                    CONFIGURATION SPECIFICATIONS
+% I) The LRS2
+%   For the most up to date description and calibration information Please
+%    see the web site. LRS2 has fixed configurations with the only variation whether you 
+%    want LRS2-B (blue) or LRS2-R (red).  Please indicate that in your text or differentiate in the
+%    exposure table.
+%
+%    (II) VIRUS
+%      VIRUS has a single setup and thus does NOT need a setup table
+%    (III) HPF
+%      HPF has a single setup and thus does NOT need a setup table
+%
+%-----------------------------------------------------------------------
+% IV)  The HRS 
+%       Note that this section is subject to change as HRS is re-commissioned
+% 
+%
+% HRS_ResPower_echelle_CrossDisp_fiber_skyfibers_slicer_gascell_binning
+%                           
+%    ResPower = 15k, 30k, 60k, or 120k
+%
+%   These values set the slit width for resolving powers of 15,000, 
+%     30,000, 60,000, and 120,000 respectively.
+%
+%   echelle = blue, central, red
+%
+%   These values set the echelle tilt angle for changing the blaze (central) 
+%    wavelengths of the orders. 
+%   Please use "central" until more information is distributed. 
+%
+%   fiber = 2as or 3as (as=arcsecond)
+%
+%   Angular diameter on the sky of the fiber to be used for feeding light 
+%    from the telescope to the spectrometer. 
+%
+%   skyfibers = 0sky, 1sky, 2sky
+%
+%   The maximum number of sky fibers that can be used without order overlap 
+%    depends upon the values of "CrossDisp" and "fiber".
+%   The limiting wavelengths are:
+%      316g and 2as: 4000+ for 0sky, 5880+ for 2sky 
+%      316g and 3as: 4000+ for 0sky, 5880+ for 1sky, 7100+ for 2sky 
+%      600g and 2as: 4000+ for 0sky, 4200+ for 2sky 
+%      600g and 3as: 4000+ for 0sky, 4200+ for 1sky, 5100+ for 2sky 
+%
+%   slicer = IS0 (no image slicer, 0=zero, not the letter O)
+%
+%   gascell = GC0 or GC1
+%
+%    0 = don't use the iodine gas cell 
+%    1 = use the iodine gas cell as user specified elsewhere
+%
+%   binning = 1x1, 1x2, 1x3, 1x4, 1x5, 2x1, 2x2, 2x3, 2x4, 2x5
+%
+%     The format is (column binning)x(row binning), where column 
+%      binning is in the cross dispersion dimension and row binning 
+%      is in the echelle dispersion dimension. 
+%     Typical binnings for each "ResPower" are found on web site.
+%    
+%        http://rhea.as.utexas.edu/HET_hrs.html
+%
+%              examples:
+%
+%     HRS_15k_central_316g7940_2as_2sky_IS0_GC0_2x5 
+%
+%     HRS_30k_central_600g5271_2as_2sky_IS0_GC0_2x3 
+%
+%     HRS_60k_central_316g5936_3as_0sky_IS0_GC0_2x1 
+%
+%     HRS_120k_central_316g6948_3as_0sky_IS0_GC0_1x1 
+%
+%   
+  
+\BeginSetupTable
+
+                &        & Resolving   \\
+Object Name     & Setup  & Power \\ \hline
+
+Cyg X-1         & lrs\_g1\_15\_OG515             & 3,600   \\ 
+Cyg X-1a         & lrs\_no\_no\_R             &\--    \\ 
+DB WDwarfs & HRS\_120K\_central\_316g6948\_3as\_0sky\_IS0\_GC0\_1x1 & 120,000 \\ \hline
+\EndSetupTable
+Note 1: Setup table only to be used with HRS (and maybe HPF). \\
+
+
+%
+%  The UT HET TAC has now implemented a procedure to require each program 
+%    to include the average setup time for all observations.
+%    The overhead should be included at 10 minutes for all HRS and MRS
+%    observations and 15 minutes for all LRS observations (note that the
+%    maximum overhead which may be charged is 15 minutes for HRS and MRS
+%    and 20 minutes for LRS - users may use these more conservative values;
+%    you could be charged less for any particular observation if it takes 
+%    less time to set up).
+%    The setup overhead time includes: acquisition time and CCD readout time
+%    as well as other related tasks.
+%
+%  The Exposure time is the "CCD shutter open"
+%
+The UT HET TAC requires the inclusion of a minimum of 10 minutes for
+overhead per visit in the
+Exposure Table.  Use this value for ``req" in the overhead column
+of the table.  The HET Board may allow a slightly higher maximum setup time to be charged.
+
+\BeginExposureTable
+
+
+                & S/N per & $\lambda$ & \# of & Overhead & \# of & Exposure & Total &       \\
+                & resolution &   of S/N  & Visits & (\#visits x  & Objects & time/visit & Time & \\
+Object Name  & element & calc. & &  req. Min) & & (Mins) & (Mins) & Notes\\ \hline
+Cyg X-1         & 200 &  6563\AA &  1   &   15    &  1 & 45 & 60  &  1 \\ 
+Cyg X-1a        &\-- &\--  &  20   &  300  & 1  & 1 & 320 &  2  \\ 
+DB WDwarfs & 100 &  6676\AA &  3   &   45    &  1 & 1880  & 5685 &  3  \\ \hline \hline
+Totals  & &  & 24 & & 96 & & 6065 & \\ 
+        & &  & & & & & 101.1 & Hours \\ \hline
+\EndExposureTable
+Note 1:  LRS2-R spectroscopic observation. \\
+Note 2:  LRS2-B spectroscopic observation with visits being separated by at 
+least one week. \\
+Note 3:  HRS observation, each observation should have its own line 
+in the table, but for large surveys a summary line like this is ok, 
+providing the individual exposure times are used in calculating the total. \\
+
+%
+%  Describe the availability of tracks
+%
+
+\BeginDescribeTracks
+Here you must indicate that you have used the web tool to check that
+there are an adequate number of tracks for each of your targets.
+This can be indicated in simple declarative statements.  However, it is
+{\bf not} sufficient to say "I checked and there are enough tracks".
+For targets in limited regions of the sky (i.e. a single object
+or a small number of objects), you must indicate how many tracks meet
+your needs.  If your targets are distributed widely across the whole
+sky, such that limited number of tracks is not a problem, indicate that
+instead.
+
+The tool for checking availability is at \\
+https://het.as.utexas.edu/HET/hetweb/ProgramPrep/hetdexcalendar.html. 
+You should use the number of tracks in RED from the bottom of the page.
+
+This section is limited to 4.2 inches or about 23 lines of text.
+
+\EndDescribeTracks
+
+%
+%   Describe and justify any special constraints on the observations
+%
+%  This section is limited to 4.2 inches or about 23 lines of text.
+%
+\BeginJustifyConstraints
+
+  Visits must be separated by at least one week because....
+  
+  These objects must be observed with the Moon down to avoid contamination
+  by the scattered solar spectrum.
+
+This section is limited to 4.35 inches or about 25 lines of text.
+
+\EndJustifyConstraints
+
+
+
+%
+%  THE HET TAC has requested that each proposer present the status of 
+%  the HET data acquired under previous proposals.
+%
+%  The PI may attach a SINGLE page of relevant publications based on McDonald 
+%  observations.  The format of this page can be setup by the PI.
+%
+%   If relevant, how much time have you received on the telescopes at 
+%   McDonald Observatory in the past three years, and what is the status of 
+%   the projects for which you obtained the data?  List papers in print 
+%   or in press reporting results from your observing time.
+%
+\BeginPreviousTime
+
+The HET TAC has requested that each proposer present the status of 
+the HET data acquired under previous proposals.
+
+This section is limited to a single page.
+The format of this page can be set by the PI.
+
+
+\EndPreviousTime
+
+\end{document}
+
+% NOTE THAT AS OF JULY 2020 WE ARE NOT ACCEPTING LONG TERM proposals
+% unless the call for proposals says otherwise.
+
+%  The following section is "optional" and should be used
+%  only as appropriate for long-term status.
+%  See the instructions below.
+
+%  PIs who have on-going projects which would be suitable for long-term
+%  status should fill out the following page.  Please move the 
+%  "\end{document}" above to below this section.
+%  Please **DO NOT** include this page in your uploads if you didn't need
+%  to fill it out.
+
+\BeginLongTermJustification
+
+% The request must indicate why you need long-term status and what
+% milestones you expect to achieve by the end of the 1 year period.
+% You must also include details of the numbers of hours you need in the
+% current and following 2 trimesters.
+%
+%  Be sure to click the "Long-Term" box on page 2 of the web form.
+%
+
+Proposers who have projects suitable for long-term status should include
+a single page of justification here.   This page is {\bf NOT} to be
+used for extending the science justification of the proposal.
+
+The request must indicate why you need long-term status and what
+milestones you expect to achieve by the end of the 1 year period.
+You must also include details of the numbers of hours you need in the
+current and following 2 trimesters.
+
+\EndLongTermJustification
+
+%\end{document}
+

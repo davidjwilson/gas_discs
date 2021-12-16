@@ -1,0 +1,27 @@
+# SDSS J0845+2257
+# CaII 8600A triplet spectrum
+#
+TRACK
+  PROGRAM       UT21-1-016
+  OBJECT        SDSSJ0845
+  INSTRUMENT    LRS2-R
+  RA		08:45:39.18 
+  DEC		+22:57:28.25
+  PMRA		-14.826
+  PMDEC		-61.629
+  PMEPOCH       2015.5
+  EQUINOX       2000.0
+  MAG		16.07
+  RMAG          16.068
+  PRI		3
+  SEEING        2.0
+  SKYBRIGHT     18.0
+  SKYTRANS      S
+  EXP		600
+  NUMEXP        2              
+  VISITS        1
+  SETUPMETHOD   DirectACAM
+  SKYBRIGHT_R   18.0
+  
+
+ 
