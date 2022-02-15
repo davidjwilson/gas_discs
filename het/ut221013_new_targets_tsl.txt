@@ -1,0 +1,16 @@
+# Gas discs at white dwarfs
+# CaII 8600A triplet spectrum
+#
+COMMON
+  PROGRAM       UT22-1-013
+  INSTRUMENT    LRS2-R
+  PRI		    3
+  SEEING        2.0
+  SKYTRANS      S
+  SETUPMETHOD   DirectACAM
+  SKYBRIGHT_R   18.0
+TRACK_LIST  
+    OBJECT          RA	            DEC	            RMAG	CRSPLIT	EXP	    SYNFREQ	    VISITS
+    WDJ1622+5840	16:22:59.65     +58:40:30.89 	16.8	2	    1800	RAND5-15	6
+
+ 
